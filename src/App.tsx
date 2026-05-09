@@ -121,14 +121,15 @@ export default function Home() {
             <h2 className="text-lg font-bold">다음 병목</h2>
             <div className="mt-4 space-y-3 text-sm leading-6 text-[#374151]">
               <p>
-                Convex 로그인이 아직 완료되지 않아 실시간 DB seed와 게임 실행은 대기 중입니다.
+                Convex 프로젝트 연결과 seed가 완료됐습니다. 이제 실시간 DB에 들어간 초기
+                사업부/에이전트 데이터를 기준으로 게임 화면을 연결합니다.
               </p>
               <code className="block rounded-md bg-[#111111] p-3 text-xs text-white">
-                npx convex dev
+                npx convex run rebound:overview
               </code>
               <p>
-                위 명령에서 브라우저 로그인과 프로젝트 생성을 마치면 `rebound:seed`로 초기
-                데이터를 넣고 Day 2 Claude 교체로 진행합니다.
+                위 명령으로 현재 Convex 데이터 상태를 확인할 수 있습니다. 다음 단계는 기존
+                ai-town 게임 렌더와 리바운드 데이터 모델을 한 화면에 붙이는 작업입니다.
               </p>
             </div>
           </div>
@@ -170,7 +171,7 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-5 pb-6">
         <div className="rounded-md border border-[#d7dce5] bg-white p-5">
           <div className="flex items-center justify-between gap-4">
-            <h2 className="text-lg font-bold">AI 에이전트 12명</h2>
+            <h2 className="text-lg font-bold">AI 에이전트 {reboundAgents.length}명</h2>
             <span className="text-sm font-bold text-[#ff4500]">비서에이전트만 MVP 양방향</span>
           </div>
           <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
